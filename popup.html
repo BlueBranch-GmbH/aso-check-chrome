@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>App Analyse</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <img class="header__icon" src="icons/icon-48.png" alt="" width="28" height="28">
+    <div>
+      <p class="header__brand">App Marketing Hub</p>
+      <p class="header__title">ASO App-Analyse</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Schritt 1: Link eingeben -->
+    <section id="step-input" class="step">
+      <h1 class="headline">Wie gut ist dein <span class="accent">Store-Eintrag?</span></h1>
+      <p class="muted">Öffne deine App im App Store oder bei Google Play und klicke auf das Icon. Oder füge den Link hier ein:</p>
+      <form id="analyze-form" novalidate>
+        <input id="app-url" class="field" type="url" placeholder="Link zum App Store oder Google Play" autocomplete="off" required>
+        <button class="btn" type="submit">Analysieren</button>
+        <p id="analyze-error" class="error" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Schritt 2: Analyse läuft -->
+    <section id="step-loading" class="step" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <h1 class="headline">Deine <span class="accent">Analyse</span> wird erstellt.</h1>
+      <p class="muted">Wir lesen gerade deinen Store-Eintrag aus. Das dauert ein paar Sekunden.</p>
+    </section>
+
+    <!-- Schritt 3: Ergebnis + Bericht anfordern -->
+    <section id="step-result" class="step" hidden>
+      <div class="app">
+        <img id="app-logo" class="app__logo" alt="" width="44" height="44" hidden>
+        <div class="app__meta">
+          <p id="app-name" class="app__name"></p>
+          <p id="app-platform" class="app__platform"></p>
+        </div>
+      </div>
+
+      <div class="score">
+        <svg class="score__ring" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="score__track" cx="50" cy="50" r="42"></circle>
+          <circle id="score-progress" class="score__progress" cx="50" cy="50" r="42"></circle>
+        </svg>
+        <div class="score__value"><strong id="score-sum">0</strong><span>/30</span></div>
+      </div>
+      <p id="score-verdict" class="verdict" hidden></p>
+
+      <ul id="score-breakdown" class="breakdown"></ul>
+
+      <div class="report">
+        <h2 class="report__title">Detaillierten ASO-Bericht per Mail erhalten</h2>
+        <p class="muted">Mit konkreten Tipps zu App-Name, Untertitel und Beschreibung.</p>
+        <form id="report-form" novalidate>
+          <input id="user-name" class="field" type="text" placeholder="Wie dürfen wir dich nennen?*" autocomplete="given-name" required>
+          <input id="user-email" class="field" type="email" placeholder="Deine E-Mail-Adresse*" autocomplete="email" required>
+          <label class="consent">
+            <input id="consent" type="checkbox" required>
+            <span>Hiermit erklärst du dich mit unseren <a href="https://www.appmarketinghub.de/datenschutzerklaerung" target="_blank" rel="noopener">Datenschutzbestimmungen</a> und der Anmeldung zu unserem Newsletter einverstanden.</span>
+          </label>
+          <button id="report-submit" class="btn" type="submit" disabled>Bericht anfordern</button>
+          <p id="report-error" class="error" role="alert"></p>
+        </form>
+      </div>
+
+      <button id="restart" class="link-btn" type="button">Andere App analysieren</button>
+    </section>
+
+    <!-- Schritt 4: Bericht verschickt -->
+    <section id="step-sent" class="step" hidden>
+      <div class="success" aria-hidden="true">✓</div>
+      <h1 class="headline">Dein <span class="accent">ASO-Bericht</span> ist unterwegs!</h1>
+      <p class="muted">Schau in dein Postfach und bestätige ggf. die Anmeldung.</p>
+      <button id="restart-sent" class="link-btn" type="button">Andere App analysieren</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="https://www.appmarketinghub.de/?utm_source=chrome-extension&amp;utm_medium=popup" target="_blank" rel="noopener">appmarketinghub.de</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

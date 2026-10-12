@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("fonts/plus-jakarta-sans-latin-800-normal.woff2") format("woff2");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+}
+
+/* Design-Tokens wie auf appmarketinghub.de */
+:root {
+  --nachtviolett: #1c1133;
+  --amethyst: #3d1e80;
+  --neongruen: #44e293;
+  --morgengrau: #e8e6ef;
+  --white: #fff;
+  --muted: #5b5470;
+  --error: #c62828;
+  --score-low: #e5484d;
+  --score-mid: #f5a524;
+  --score-high: var(--neongruen);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 360px;
+  margin: 0;
+  background: var(--white);
+  color: var(--nachtviolett);
+  font: 400 14px/1.45 "IBM Plex Sans", system-ui, sans-serif;
+}
+
+[hidden] { display: none !important; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--nachtviolett);
+  color: var(--white);
+}
+.header__icon { border-radius: 6px; }
+.header__brand { margin: 0; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--neongruen); }
+.header__title { margin: 0; font: 800 15px/1.2 "Plus Jakarta Sans", sans-serif; }
+
+main { padding: 18px; }
+
+.step { display: flex; flex-direction: column; gap: 12px; }
+
+.headline {
+  margin: 0;
+  font: 800 19px/1.25 "Plus Jakarta Sans", sans-serif;
+}
+.accent { color: var(--amethyst); }
+.muted { margin: 0; color: var(--muted); }
+
+form { display: flex; flex-direction: column; gap: 10px; }
+
+.field {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--morgengrau);
+  border-radius: 8px;
+  font: inherit;
+  color: inherit;
+}
+.field:focus { outline: none; border-color: var(--amethyst); }
+
+.btn {
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--neongruen);
+  color: var(--nachtviolett);
+  font: 800 14px/1 "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) { filter: brightness(.95); }
+.btn:disabled { background: var(--morgengrau); color: var(--muted); cursor: not-allowed; }
+
+.link-btn {
+  align-self: center;
+  padding: 4px;
+  border: 0;
+  background: none;
+  color: var(--amethyst);
+  font: 600 13px/1 "IBM Plex Sans", sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.error { margin: 0; min-height: 0; color: var(--error); font-size: 13px; }
+.error:empty { display: none; }
+
+/* Ladeanimation */
+.spinner {
+  align-self: center;
+  width: 54px;
+  height: 54px;
+  margin: 10px 0 4px;
+  border: 5px solid var(--morgengrau);
+  border-top-color: var(--neongruen);
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Ergebnis */
+.app { display: flex; align-items: center; gap: 12px; }
+.app__logo { border-radius: 10px; object-fit: cover; }
+.app__name { margin: 0; font: 800 15px/1.25 "Plus Jakarta Sans", sans-serif; }
+.app__platform { margin: 0; color: var(--muted); font-size: 12px; }
+
+.score { position: relative; align-self: center; width: 132px; height: 132px; }
+.score__ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.score__track, .score__progress { fill: none; stroke-width: 9; }
+.score__track { stroke: var(--morgengrau); }
+.score__progress { stroke-linecap: round; transition: stroke-dasharray .8s ease-out; }
+.score__value {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.score__value strong { font-size: 34px; font-weight: 800; line-height: 1; }
+.score__value span { color: var(--muted); font-size: 13px; }
+
+.verdict { margin: 0; text-align: center; font-weight: 600; }
+
+.breakdown { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.breakdown li { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font-size: 13px; }
+.breakdown__bar { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: var(--morgengrau); overflow: hidden; }
+.breakdown__fill { height: 100%; border-radius: 3px; }
+.breakdown__points { font-weight: 600; }
+
+.report {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--morgengrau);
+}
+.report__title { margin: 0; font: 800 15px/1.25 "Plus Jakarta Sans", sans-serif; }
+.report .field { border-color: var(--white); }
+
+.consent { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; color: var(--muted); }
+.consent input { margin-top: 2px; accent-color: var(--amethyst); }
+.consent a { color: var(--amethyst); }
+
+.success {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--neongruen);
+  font: 800 26px/1 "Plus Jakarta Sans", sans-serif;
+}
+
+.footer { padding: 10px 18px 14px; text-align: center; font-size: 12px; }
+.footer a { color: var(--muted); }
