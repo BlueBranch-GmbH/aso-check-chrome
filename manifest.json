@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "App Analyse – App Marketing Hub",
-  "short_name": "App Analyse",
+  "name": "ASO App-Analyse von BlueBranch",
+  "short_name": "App-Analyse",
   "version": "1.0.0",
-  "description": "Kostenlose ASO-Analyse für App Store & Google Play: Score für App-Name, Untertitel und Beschreibung mit einem Klick.",
-  "homepage_url": "https://www.appmarketinghub.de/kostenloses-app-analyse-tool-von-app-marketing-hub",
+  "description": "Kostenloser ASO-Check für App Store & Google Play: Score für App-Name, Untertitel und Beschreibung mit einem Klick.",
+  "homepage_url": "https://www.bluebranch.de/",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",

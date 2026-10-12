@@ -29,6 +29,11 @@ function isStoreUrl(value) {
   }
 }
 
+// Apple liefert das App-Icon als breites 1200×630-Vorschaubild; mzstatic skaliert über den Dateinamen
+function squareLogoUrl(url) {
+  return url.replace(/\/\d+x\d+[a-z]*\.(png|jpe?g|webp)$/i, '/176x176bb.png');
+}
+
 function scoreColor(points, max) {
   const ratio = points / max;
   if (ratio >= 25 / 30) return 'var(--score-high)';
@@ -41,7 +46,7 @@ function scoreColor(points, max) {
  * Gibt einen Satz für den Gesamtscore (0–30) zurück, oder '' für „kein Fazit anzeigen“.
  */
 function getScoreVerdict(sumScore) {
-  // Gleiche Schwellen wie die Farben des Score-Kreises auf appmarketinghub.de
+  // Gleiche Schwellen wie die Farben des Score-Kreises im Web-Tool (15 / 25 Punkte)
   if (sumScore >= 25) return 'Starker Store-Eintrag – jetzt geht es um den Feinschliff.';
   if (sumScore >= 15) return 'Solide Basis – hier steckt noch Ranking-Potenzial.';
   return 'Dein Store-Eintrag verschenkt viel Sichtbarkeit.';
@@ -73,7 +78,7 @@ function renderResult(result) {
   $('app-name').textContent = result.appName;
   $('app-platform').textContent = platform === 'apple' ? 'Apple App Store' : 'Google Play Store';
   if (result.logoUrl) {
-    $('app-logo').src = result.logoUrl;
+    $('app-logo').src = squareLogoUrl(result.logoUrl);
     $('app-logo').hidden = false;
   } else {
     $('app-logo').hidden = true;

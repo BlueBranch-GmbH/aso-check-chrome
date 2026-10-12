@@ -42,6 +42,7 @@ const puppeteer = require(process.env.PUPPETEER_PATH || 'puppeteer');
     rows: [...document.querySelectorAll('#score-breakdown li')].map((li) => li.innerText.replace(/\n/g, ' ')),
   }));
   console.log(JSON.stringify(state));
+  await page.waitForFunction(() => { const img = document.getElementById('app-logo'); return img.hidden || img.complete; }, { timeout: 15000 }).catch(() => {});
   await new Promise((r) => setTimeout(r, 900));
   await page.screenshot({ path: `${prefix}-2.png`, fullPage: true });
   await browser.close();

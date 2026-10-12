@@ -1,14 +1,14 @@
-# Chrome Web Store – Eingaben für „App Analyse – App Marketing Hub“
+# Chrome Web Store – Eingaben für „ASO App-Analyse von BlueBranch“
 
 ## Paket
-`dist/app-analyse-1.0.0.zip`
+`dist/bluebranch-aso-app-analyse-1.0.0.zip`
 
 ## Store-Eintrag
 
 **Beschreibung**
 
 ```
-Wie gut ist der Store-Eintrag deiner App? Die kostenlose App-Analyse von App Marketing Hub prüft mit einem Klick, wie gut dein Eintrag im Apple App Store oder im Google Play Store für App Store Optimization (ASO) aufgestellt ist.
+Wie gut ist der Store-Eintrag deiner App? Der kostenlose ASO-Check von BlueBranch zeigt dir mit einem Klick, wie gut dein Eintrag im Apple App Store oder im Google Play Store für App Store Optimization (ASO) aufgestellt ist.
 
 So funktioniert's:
 • Öffne deine App im App Store oder bei Google Play und klicke auf das Icon – die Analyse startet automatisch.
@@ -22,7 +22,9 @@ Das wird geprüft:
 
 Du erhältst einen ASO-Score von 0 bis 30 Punkten mit Aufschlüsselung nach Kategorien. Auf Wunsch schicken wir dir zusätzlich kostenlos einen detaillierten ASO-Bericht mit konkreten Tipps per E-Mail.
 
-App Marketing Hub ist die Agentur für App-Marketing und App Store Optimization: https://www.appmarketinghub.de
+Was der Check nicht kann: Er bewertet Länge und Aufbau deiner Texte, nicht Suchvolumen oder Rankings einzelner Keywords. Für eine vollständige Keyword-Strategie sprich uns gerne an.
+
+BlueBranch GmbH aus Fürth entwickelt Apps und Websites und kümmert sich um ihre Sichtbarkeit: https://www.bluebranch.de
 ```
 
 **Kategorie:** Tools (alternativ: Entwicklertools)
@@ -33,8 +35,8 @@ App Marketing Hub ist die Agentur für App-Marketing und App Store Optimization:
 - Screenshot 1280×800: `store/screenshot-1280x800.png`
 - Kleine Werbekachel 440×280: `store/promo-440x280.png`
 
-**Offizielle URL / Startseite:** https://www.appmarketinghub.de/kostenloses-app-analyse-tool-von-app-marketing-hub
-**Support-URL:** https://www.appmarketinghub.de/kontakt (falls vorhanden, sonst Startseite)
+**Startseite:** https://www.bluebranch.de/
+**Support-URL:** https://www.bluebranch.de/kontakt
 
 ## Datenschutz (Tab „Datenschutzpraktiken“)
 
@@ -55,7 +57,7 @@ Das letzte Analyseergebnis wird für die laufende Browsersitzung zwischengespeic
 
 **Begründung Host-Berechtigung (app-store-analyzer.appmarketinghub.de)**
 ```
-Die Store-URL wird an unseren eigenen Analyse-Server geschickt, der den Store-Eintrag auswertet und den Score zurückgibt. Auf Wunsch des Nutzers wird darüber auch der ASO-Bericht per E-Mail angefordert.
+Die Store-URL wird an den Analyse-Server der BlueBranch GmbH geschickt, der den Store-Eintrag auswertet und den Score zurückgibt. Auf Wunsch des Nutzers wird darüber auch der ASO-Bericht per E-Mail angefordert.
 ```
 
 **Remote-Code:** Nein, ich verwende keinen Remote-Code.
@@ -70,13 +72,13 @@ Die Store-URL wird an unseren eigenen Analyse-Server geschickt, der den Store-Ei
 - Daten werden nicht für Zwecke verwendet, die nichts mit dem alleinigen Zweck zu tun haben
 - Daten werden nicht zur Bestimmung der Kreditwürdigkeit oder für Kreditzwecke verwendet
 
-**Datenschutzerklärung-URL:** https://www.appmarketinghub.de/datenschutzerklaerung
+**Datenschutzerklärung-URL:** https://www.bluebranch.de/datenschutzerklaerung
 → Dort muss vor dem Einreichen ein Abschnitt zur Chrome-Erweiterung stehen (siehe unten).
 
 ## Textvorschlag für die Datenschutzerklärung
 
 ```
-Chrome-Erweiterung „App Analyse – App Marketing Hub“
+Chrome-Erweiterung „ASO App-Analyse von BlueBranch“
 
 Wenn du unsere Browser-Erweiterung nutzt, übermitteln wir die Adresse (URL) des von dir gewählten App-Store- oder Google-Play-Eintrags an unseren Analyse-Server (app-store-analyzer.appmarketinghub.de), um den ASO-Score zu berechnen. Weitere Inhalte deiner Tabs oder deinen Browserverlauf lesen wir nicht.
 
