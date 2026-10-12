@@ -82,7 +82,7 @@ Chrome-Erweiterung „ASO App-Analyse von BlueBranch“
 
 Wenn du unsere Browser-Erweiterung nutzt, übermitteln wir die Adresse (URL) des von dir gewählten App-Store- oder Google-Play-Eintrags an unseren Analyse-Server (app-store-analyzer.appmarketinghub.de), um den ASO-Score zu berechnen. Weitere Inhalte deiner Tabs oder deinen Browserverlauf lesen wir nicht.
 
-Forderst du den detaillierten ASO-Bericht an, verarbeiten wir zusätzlich deinen Namen und deine E-Mail-Adresse, um dir den Bericht zu senden und dich – mit deiner Einwilligung – für unseren Newsletter anzumelden (Art. 6 Abs. 1 lit. a DSGVO). Für den Newsletterversand nutzen wir Klaviyo. Du kannst deine Einwilligung jederzeit über den Abmeldelink im Newsletter widerrufen.
+Forderst du den detaillierten ASO-Bericht an, verarbeiten wir zusätzlich deinen Namen und deine E-Mail-Adresse, um dir den Bericht zu schicken und dich bei Bedarf dazu zu kontaktieren (Art. 6 Abs. 1 lit. a DSGVO). Eine Anmeldung zu einem Newsletter erfolgt nicht. Du kannst deine Einwilligung jederzeit per E-Mail an uns widerrufen.
 
 Das letzte Analyseergebnis wird nur lokal in deinem Browser für die laufende Sitzung gespeichert und beim Schließen des Browsers gelöscht.
 ```

@@ -159,6 +159,8 @@ async function sendReport(event) {
     const { appName, appId, titleScore, subtitleScore, titleMatchScore, descriptionScore, sumScore, url, platform } = currentResult;
     await postJson('/evaluation', {
       name, email, appName, appId, titleScore, subtitleScore, titleMatchScore, descriptionScore, sumScore, url, platform,
+      // Server verschickt damit den BlueBranch-Bericht statt der App-Marketing-Hub-Mail, ohne Newsletter
+      brand: 'bluebranch',
     });
     showStep('step-sent');
   } catch {
