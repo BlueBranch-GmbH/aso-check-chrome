@@ -98,6 +98,8 @@ form { display: flex; flex-direction: column; gap: 10px; }
 .btn:hover:not(:disabled) { background: #1e40af; }
 .btn:focus-visible { outline: 3px solid rgba(29, 78, 216, .35); outline-offset: 2px; }
 .btn:disabled { background: var(--line); color: var(--text-muted); cursor: not-allowed; }
+.btn--ghost { text-align: center; text-decoration: none; background: none; color: var(--brand-blue); box-shadow: inset 0 0 0 1.5px var(--brand-blue); }
+.btn--ghost:hover:not(:disabled) { background: var(--bg-light); }
 
 .link-btn {
   align-self: center;
@@ -174,6 +176,11 @@ form { display: flex; flex-direction: column; gap: 10px; }
 .consent { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
 .consent input { margin-top: 3px; accent-color: var(--brand-blue); }
 .consent a { color: var(--brand-blue); }
+
+.more { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.more__title { margin: 0; font-weight: 700; }
+.more a { color: var(--brand-blue); font-weight: 600; }
+.more a::after { content: " →"; }
 
 .success {
   align-self: center;

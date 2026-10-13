@@ -1,0 +1,4 @@
+# Kommerziell lizenzierte Schrift: liegt nur lokal und im Store-Paket, nicht im öffentlichen Repo
+fonts/Gilroy-ExtraBold.woff2
+# Pakete enthalten die Schrift ebenfalls
+dist/
